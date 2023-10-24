@@ -1,0 +1,38 @@
+:root{
+  --text-active-color: #5f43b2;
+  --text-normal-color: black;
+  --text-hover: #3d2487;
+  --text-size: 1rem;
+  --z-index-fix: 100;
+  --bg-color: #fbfbfe;
+  --height-header: 3rem;
+  --font-weight-m: 600;
+  --font-weight-s: 500;
+  --font-size-xs : 0.8rem;
+  --font-size-s : 0.875rem;
+  --font-size-ms : 1rem;
+  --font-size-l : 1.625rem;
+  --font-size-xl : 2.5rem;
+  --font-size-xxl : 4rem;
+  --font-size-m : 1.125rem;
+}
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("./assets/Roboto-Medium.ttf");
+}
+body{
+  color: grey;
+  background-color: var(--bg-color);
+  font-size: 1rem;
+  font-family: "Roboto Light", serif;
+}
+i {
+  color: var(--text-active-color);
+}
+a {
+  text-decoration: none;
+  color: var(--text-normal-color);
+}
+textarea {
+  resize: none;
+}

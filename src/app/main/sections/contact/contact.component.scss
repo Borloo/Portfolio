@@ -1,0 +1,48 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-m);
+  color: var(--text-normal-color);
+}
+.section-subtitle {
+  margin-bottom: 1.5rem;
+  display: block;
+  font-size: var(--font-size-m);
+}
+.section-title, .section-subtitle {
+  text-align: center;
+}
+.container-fluid {
+  width: 200%;
+}
+.input-container {
+  background-color: #ededf2;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+.input-label {
+  color: var(--text-active-color);
+  margin-left: 0.5rem;
+}
+.input-contact {
+  width: 100%;
+  background-color: #ededf2;
+  color: black;
+  border: none;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  outline: 0;
+}
+.btn-send {
+  color: var(--bg-color);
+  background-color: var(--text-active-color);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.send-i {
+  color: var(--bg-color);
+  margin-left: 0.2rem;
+}

@@ -1,0 +1,186 @@
+<h2 class="section-title">Mon parcours</h2>
+<span class="section-subtitle">Mes expériences</span>
+<div class="parcours-container container">
+  <div class="parcours-header">
+    <div class="btn btn-school" id="btn-school" (click)="clickSchool()">
+      <i class="fa-solid fa-graduation-cap fa-xl" id="school-i"></i><h2 class="choice-title">Formation</h2>
+    </div>
+    <div class="btn btn-work" id="btn-work" (click)="clickWork()">
+      <i class="fa-solid fa-briefcase fa-xl" id="work-i"></i><h2 class="choice-title">Professionnel</h2>
+    </div>
+  </div>
+  <div class="parcours-content" id="parcours">
+    <div *ngIf="this.school;then schoolContent else workContent">
+    </div>
+    <ng-template #schoolContent>
+      <div class="parcour-content" id="school">
+        <div class="parcour-experience master">
+          <a class="card-experience card-1">
+            <div class="master-content">
+              <h3 class="parcour-title">Master Chef de projet ingéniérie logiciel</h3>
+              <span class="parcour-subtitle"><a class="link-project" (click)="clickWork('cap')"><i class="fa-solid fa-code"></i> Alternance</a> </span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="https://www.ipi-ecoles.com/" class="link-company" target="_blank"> IPI </a><i class="fa-solid fa-location-dot"></i> Toulouse</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Octobre 2023</p>
+              </div>
+            </div>
+          </a>
+          <div class="master-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar today"></span>
+          </div>
+        </div>
+        <div class="parcour-experience lp">
+          <div></div>
+          <div class="lp-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar today"></span>
+          </div>
+          <a class="card-experience card-lp">
+            <div class="lp-content">
+              <h3 class="parcour-title">LP Analyste programmeur de systèmes informatiques ouverts</h3>
+              <span class="parcour-subtitle"><a class="link-project" (click)="clickWork('6tm')"><i class="fa-solid fa-code"></i> Alternance</a> </span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="https://www.iut-blagnac.fr/fr/" class="link-company" target="_blank"> IUT de Blagnac </a><i class="fa-solid fa-location-dot"></i> Toulouse</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Septembre 2022 - Juin 2023</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="parcour-experience dut">
+          <a class="card-experience card-1">
+            <div class="dut-content">
+              <h3 class="parcour-title">DUT Informatique</h3>
+              <span class="parcour-subtitle"><a class="link-project" (click)="clickWork('6tm2')"><i class="fa-solid fa-code"></i> Stage </a><a class="link-project" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-briefcase"></i> Jobs</a> </span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="https://www.iut-blagnac.fr/fr/" class="link-company" target="_blank"> IUT de Blagnac </a><i class="fa-solid fa-location-dot"></i> Toulouse</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Septembre 2020 - Juin 2022</p>
+              </div>
+            </div>
+          </a>
+          <div class="dut-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar bar-end"></span>
+          </div>
+        </div>
+        <div class="parcour-experience bac">
+          <div></div>
+          <div class="bac-state">
+            <span class="parcour-point"></span>
+          </div>
+          <a class="card-experience">
+            <div class="bac-content">
+              <h3 class="parcour-title">Bac STI2D option SIN</h3>
+              <span class="parcour-subtitle"><a href="#" class="link-project" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-briefcase"></i> Jobs</a> </span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="https://www.lycee-saint-cricq.org/" target="_blank" class="link-company"> Lycée Saint Cricq </a><i class="fa-solid fa-location-dot"></i> Pau</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Septembre 2018 - Juin 2020</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template #workContent>
+      <div class="parcour-content" id="work">
+        <div class="parcour-experience capgemini">
+          <a class="card-experience card-1" [ngClass]="{ 'active': this.cardCap }">
+            <div class="capgemin-content">
+              <h3 class="parcour-title">Alternant développeur web</h3>
+              <span class="parcour-subtitle"><a class="link-project" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" (click)="this.clickProject('cap')"><i class="fa-solid fa-code"></i> Projets</a></span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="#" class="link-company"> Capgemini </a><i class="fa-solid fa-location-dot"></i> Toulouse</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Septembre 2023</p>
+              </div>
+            </div>
+          </a>
+          <div class="capgemini-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar today"></span>
+          </div>
+        </div>
+        <div class="parcour-experience sixtm">
+          <div></div>
+          <div class="sixtm-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar today"></span>
+          </div>
+          <a class="card-experience" [ngClass]="{ 'active': this.card6tm }">
+            <div class="sixtm-content">
+              <h3 class="parcour-title">Alternant développeur Symfony</h3>
+              <span class="parcour-subtitle"><a href="#" class="link-project" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" (click)="this.clickProject('6tm')"><i class="fa-solid fa-code"></i> Projets</a></span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="#" class="link-company"> 6TM </a><i class="fa-solid fa-location-dot"></i> Rennes</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Octobre 2022 - Juin 2023</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="parcour-experience sixtm2">
+          <a class="card-experience card-1" [ngClass]="{ 'active': this.card6tm2 }">
+            <div class="sixtm2-content">
+              <h3 class="parcour-title">Stagiaire développeur Symfony</h3>
+              <span class="parcour-subtitle"><a href="#" class="link-project"><i class="fa-solid fa-code"></i> Projets</a></span><br>
+              <span class="parcour-subtitle"><i class="fa-regular fa-building"></i><a href="#" class="link-company"> 6TM </a><i class="fa-solid fa-location-dot"></i> Rennes</span><br>
+              <div class="parcour-duration">
+                <p class="date"><i class="calendar fa-regular fa-calendar"></i>Avril 2022 - Juin 2022</p>
+              </div>
+            </div>
+          </a>
+          <div class="sixtm2-state">
+            <span class="parcour-point"></span>
+            <span class="parcour-bar end"></span>
+          </div>
+        </div>
+        <div class="parcour-experience more">
+          <div></div>
+          <div class="more-state">
+            <span class="parcour-point"></span>
+          </div>
+          <a class="card-experience">
+            <div class="more-content">
+              <h3 class="parcour-title">Autres expériences</h3>
+              <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-more">En savoir plus</a><br>
+            </div>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Expériences autre qu'informatique</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-other-experiences></app-other-experiences>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-fermer" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel2">Mes expériences chez {{this.modalTitle}}</h1>
+      </div>
+      <div class="modal-body">
+<!--        <div class="card-project container" *ngFor="let project of this.projects">-->
+<!--          <div class="project-header container">-->
+<!--            <h2 class="project-title"><a href="{{project.url}}" target="_blank" class="link-company"><i class="fa-solid fa-code"></i> {{project.title}}</a></h2>-->
+<!--          </div>-->
+<!--        </div>-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-fermer" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>

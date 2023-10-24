@@ -1,0 +1,36 @@
+<h2 class="section-title">Contactez moi</h2>
+<span class="section-subtitle">Pour toutes informations</span>
+<div class="contact-container container grid">
+  <form [formGroup]="this.form" (ngSubmit)="onSubmit()" method="post" class="form-contact grid">
+    <div class="inputs-container grid">
+      <div class="input-container">
+        <i class="fa-solid fa-signature"></i><label for="name" class="input-label"> Nom</label>
+        <input [ngClass]="{ 'is-invalid': submited && controls['name'].errors }" formControlName="name" type="text" id="name" class="input-contact">
+        <div *ngIf="submited && controls['name'].errors" class="invalid-feedback">
+          <div *ngIf="controls['name'].errors['required']">Le nom est requis</div>
+          <div *ngIf="controls['name'].errors['minlength']">Le nom doit être d'au moins 3 caractères</div>
+          <div *ngIf="controls['name'].errors['maxlength']">Le nom ne doit pas dépasser les 20 caractères</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <i class="fa-solid fa-at"></i><label for="email" class="input-label">Email</label>
+        <input [ngClass]="{ 'is-invalid': submited && controls['email'].errors }" formControlName="email" type="email" id="email" class="input-contact">
+        <div *ngIf="submited && controls['email'].errors" class="invalid-feedback">
+          <div *ngIf="controls['email'].errors['required']">L'email est requis</div>
+          <div *ngIf="controls['email'].errors['minlength']">L'email doit être d'au moins 3 caractères</div>
+          <div *ngIf="controls['email'].errors['maxlength']">L'email ne doit pas dépasser les 30 caractères</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <i class="fa-solid fa-pencil"></i><label for="texte" class="input-label">Message</label>
+        <textarea [ngClass]="{ 'is-invalid': submited && controls['content'].errors }" formControlName="content" rows="5" id="texte" class="input-contact"></textarea>
+        <div *ngIf="submited && controls['content'].errors" class="invalid-feedback">
+          <div *ngIf="controls['content'].errors['required']">Le contenu est requis</div>
+          <div *ngIf="controls['content'].errors['minlength']">Le contenu doit être d'au moins 75 caractères</div>
+          <div *ngIf="controls['content'].errors['maxlength']">Le contenu ne doit pas dépasser les 500 caractères</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-send">Envoyer <i class="send-i fa-regular fa-paper-plane"></i></button>
+    </div>
+  </form>
+</div>

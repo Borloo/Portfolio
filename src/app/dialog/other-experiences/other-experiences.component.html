@@ -1,0 +1,130 @@
+<div class="experiences-container container">
+  <div class="experience-container ru2" [ngClass]="{ 'open' : this.ru2 }">
+    <a class="experience-header" (click)="changeState('ru2')">
+      <div class="header-container">
+        <h2 class="experience-title"><a href="https://www.crous-toulouse.fr/" target="_blank" class="link-company"><i class="fa-regular fa-building"></i> CROUS de Toulouse</a></h2>
+        <span class="experience-subtitle work-title"><i class="fa-solid fa-briefcase"></i> Employé polyvalent en cuisine universitaire</span><br>
+        <span class="experience-subtitle"><i class="calendar fa-regular fa-calendar"></i> Septembre 2021 - Mars 2022 <i class="fa-solid fa-location-dot"></i> Toulouse</span>
+      </div>
+      <div class="experience-state">
+        <div *ngIf="this.ru2; then openContentRu2 else closeContentRu2"></div>
+        <ng-template #openContentRu2>
+          <i class="fa-solid fa-arrow-up"></i>
+        </ng-template>
+        <ng-template #closeContentRu2>
+          <i class="fa-solid fa-arrow-down"></i>
+        </ng-template>
+      </div>
+    </a>
+    <div *ngIf="this.ru2" class="experience-content">
+      <span class="title-bar"></span>
+      <div class="content-title">
+        <h3 class="title-skills">Compétences:</h3>
+        <div class="skills-container container">
+          <ul class="skills-list">
+            <li class="skill-item" *ngFor="let competence of this.competences">{{competence}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-content">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="experience-container tnt" [ngClass]="{ 'open' : this.tnt }">
+    <a class="experience-header" (click)="changeState('tnt')">
+      <div class="header-container">
+        <h2 class="experience-title"><a href="https://www.tnt.com/express/fr_fr/site/home.html" target="_blank" class="link-company"><i class="fa-regular fa-building"></i> TNT - FedEx</a></h2>
+        <span class="experience-subtitle work-title"><i class="fa-solid fa-briefcase"></i> Manutentionnaire d'entrepôt</span><br>
+        <span class="experience-subtitle"><i class="calendar fa-regular fa-calendar"></i> Juin 2021 - Août 2021 <i class="fa-solid fa-location-dot"></i> Toulouse</span>
+      </div>
+      <div class="experience-state">
+        <div *ngIf="this.tnt; then openContentTnt else closeContentTnt"></div>
+        <ng-template #openContentTnt>
+          <i class="fa-solid fa-arrow-up"></i>
+        </ng-template>
+        <ng-template #closeContentTnt>
+          <i class="fa-solid fa-arrow-down"></i>
+        </ng-template>
+      </div>
+    </a>
+    <div *ngIf="this.tnt" class="experience-content">
+      <span class="title-bar"></span>
+      <div class="content-title">
+        <h3 class="title-skills">Compétences:</h3>
+        <div class="skills-container container">
+          <ul class="skills-list">
+            <li class="skill-item" *ngFor="let competence of this.competences">{{competence}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-content">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="experience-container ru1" [ngClass]="{ 'open': this.ru1 }">
+    <a class="experience-header" (click)="changeState('ru1')">
+      <div class="header-container">
+        <h2 class="experience-title"><a href="https://www.crous-toulouse.fr/" target="_blank" class="link-company"><i class="fa-regular fa-building"></i> CROUS de Toulouse</a></h2>
+        <span class="experience-subtitle work-title"><i class="fa-solid fa-briefcase"></i> Employé polyvalent en cuisine universitaire</span><br>
+        <span class="experience-subtitle"><i class="calendar fa-regular fa-calendar"></i> Septembre 2020 - Novembre 2020 <i class="fa-solid fa-location-dot"></i> Toulouse</span>
+      </div>
+      <div class="experience-state">
+        <div *ngIf="this.ru1; then openContentRu1 else closeContentRu1"></div>
+        <ng-template #openContentRu1>
+          <i class="fa-solid fa-arrow-up"></i>
+        </ng-template>
+        <ng-template #closeContentRu1>
+          <i class="fa-solid fa-arrow-down"></i>
+        </ng-template>
+      </div>
+    </a>
+    <div *ngIf="this.ru1" class="experience-content">
+      <span class="title-bar"></span>
+      <div class="content-title">
+        <h3 class="title-skills">Compétences:</h3>
+        <div class="skills-container container">
+          <ul class="skills-list">
+            <li class="skill-item" *ngFor="let competence of this.competences">{{competence}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-content">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="experience-container boulangerie" [ngClass]="{ 'open': this.boulangerie }">
+    <a class="experience-header" (click)="changeState('boulangerie')">
+      <div class="header-container">
+        <h2 class="experience-title"><a class="link-company"><i class="fa-regular fa-building"></i> Moulin de Lons</a></h2>
+        <span class="experience-subtitle work-title"><i class="fa-solid fa-briefcase"></i> Employé polyvalent en boulangerie</span><br>
+        <span class="experience-subtitle"><i class="calendar fa-regular fa-calendar"></i> Février 2017 - Août 2020 <i class="fa-solid fa-location-dot"></i> Pau</span>
+      </div>
+      <div class="experience-state">
+        <div *ngIf="this.boulangerie; then openContentBoulangerie else closeContentBoulangerie"></div>
+        <ng-template #openContentBoulangerie>
+          <i class="fa-solid fa-arrow-up"></i>
+        </ng-template>
+        <ng-template #closeContentBoulangerie>
+          <i class="fa-solid fa-arrow-down"></i>
+        </ng-template>
+      </div>
+    </a>
+    <div *ngIf="this.boulangerie" class="experience-content">
+      <span class="title-bar"></span>
+      <div class="content-title">
+        <h3 class="title-skills">Compétences:</h3>
+        <div class="skills-container container">
+          <ul class="skills-list">
+            <li class="skill-item" *ngFor="let competence of this.competences">{{competence}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-content">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>

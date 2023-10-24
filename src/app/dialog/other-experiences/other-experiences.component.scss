@@ -1,0 +1,81 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.experience-container {
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+.ru2 {
+  margin-top: 0;
+}
+.experience-header {
+  display: flex;
+}
+.experience-state {
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+span, i {
+  color: grey;
+}
+.fa-building, .fa-briefcase, .work-title {
+  color: black;
+}
+.experience-container:hover, .open {
+
+  background-color: #ededf2;
+
+  .fa-arrow-down, .fa-arrow-up {
+    color: var(--text-active-color);
+  }
+
+  .work-title {
+    color: #00a0c4;
+  }
+}
+.skills-list {
+  text-align: center;
+  display: flex;
+  column-gap: 1rem;
+  padding: 0;
+}
+.skill-item {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.content-title {
+  display: flex;
+  margin-top: 1rem;
+}
+.title-skills {
+  color: black;
+  font-size: var(--font-size-ms);
+  font-weight: var(--font-weight-m);
+}
+.skill-item {
+  font-size: var(--font-size-s);
+}
+.title-bar {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--text-active-color);
+  margin-top: 1rem;
+}
+.fa-building, .link-company {
+  color: var(--text-active-color);
+}
+.experience-content {
+  cursor: default;
+}

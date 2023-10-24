@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-m);
+  color: var(--text-normal-color);
+}
+.section-subtitle {
+  margin-bottom: 4rem;
+  display: block;
+  font-size: var(--font-size-m);
+}
+.section-title, .section-subtitle {
+  text-align: center;
+}
+.about-container {
+  column-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about-img {
+  width: 350px;
+  border-radius: 0.5rem;
+}
+.about-description {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  font-size: var(--font-size-m);
+}
+.btn-cv {
+  justify-content: initial;
+  background-color: var(--text-active-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-s);
+}
+.btn-cv:hover {
+  background-color: var(--text-hover);
+}
+i {
+  color: var(--bg-color);
+}

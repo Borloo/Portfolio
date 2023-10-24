@@ -1,0 +1,22 @@
+.header {
+  top: 0;
+  bottom: initial;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: var(--z-index-fix);
+  background-color: var(--bg-color);
+}
+.header, .main {
+  padding: 0 1rem;
+}
+.scroll {
+  box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+}
+.footer {
+  height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 20px;
+  background-color: var(--text-active-color);
+  color: var(--bg-color );
+}
